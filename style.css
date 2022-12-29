@@ -71,6 +71,7 @@ footer a{
   text-decoration: none;
   color: #323230;
   margin-right: 20px;
+  padding-right:2px;
 }
 footer p img{
   vertical-align: bottom;
@@ -78,6 +79,12 @@ footer p img{
   padding:1px;
   
 }
+footer a:hover{
+ color: #990000;
+ background-color:#ff9999;
+}
+
+
 
 /*    ---PORTFOLIO---     */
 .main2 {
@@ -134,40 +141,58 @@ footer p img{
 /* about panel */
 .panel2.about {
   grid-template-rows: 2fr 1fr;
-  overflow: hidden;
+  //overflow: hidden;
   text-align:center;
-  
 }
 .panel2.about img {
   min-height: 100%;
   min-width: 100%;
   
 }
-.panel2.about .color{
+/*.panel2.about .text{
   background-color: #fdd7c1;
+  color: #323230;
+}*/
+.panel2.about .color{
+  background-color: #c79c6d;
+  //color: #eeeee7;
 }
 
 /* education panel */
 .panel2.education {
   grid-template-rows: 1fr;
-  overflow: hidden;
+  //overflow: hidden;
   text-align:center;
 }
 .panel2.education img {
   min-height: 100%;
   min-width: 100%;
 }
-.panel2.education .color{
-  background-color: #323230;
-  color: #a8a8a8;
+.panel2.education .text{
+  background-color: #fdd7c1;
+  color: #323230;
 }
 
-.innerPannel{
+.panel2.education .text .innerPannel{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;  
 }
 
-.innerPannel .part{
+.panel2.education .text .innerPannel .part{
+  grid-template-columns: 1fr;
+  padding: 40px 60px;
+}
+
+/* skills panel */
+.panel2.skills .text{
+  text-align:center;
+}
+.panel2.skills .text .innerPannel{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;  
+}
+
+.panel2.skills .text .innerPannel .part{
   grid-template-columns: 1fr;
   padding: 40px 60px;
 }
@@ -175,7 +200,7 @@ footer p img{
 /* hobbies panel */
 .panel2.hobbies {
   grid-template-rows: 1fr;
-  overflow: hidden;
+  //overflow: hidden;
   text-align:center;
 }
 .panel2.hobbies img {
@@ -203,13 +228,23 @@ footer p img{
   }
   .panel.photos img {
     margin-left: 0%;
-    
+    overflow:hidden;
   }
 }
+
+@media screen and (max-width: 1600px) {
+  .panel.photos img {
+    min-height: 100%;
+    min-width: 100%;
+    margin-left: 0%;
+  }
+}
+
+
 @media screen and (max-width: 960px) {
   main {
     grid-template-columns: 1fr;
-    grid-template-rows: 500px 400px 400px;
+    grid-template-rows: 500px 700px 600px;
   }
   .panel.about {
     grid-column: span 2;
@@ -222,6 +257,9 @@ footer p img{
   .panel.photos img {
     margin-left: 0%;
   }
+  .main2 {
+    grid-template-rows: 500px 700px 600px;
+  }
   .innerPannel{
     display:grid;
     grid-template-columns: 0fr 1fr 1fr 0fr;  
@@ -230,7 +268,7 @@ footer p img{
 }
 @media screen and (max-width: 680px) {
   main {
-    grid-template-rows: 700px 600px 600px;
+    grid-template-rows: 700px 800px 600px;
   }
   .panel.about {
     grid-column: span 1;
@@ -252,13 +290,18 @@ footer p img{
     margin-left: 0%;
   }
   
-
+  .main2 {
+    grid-template-rows: 700px 800px 700px;
+  }
   .panel2.welcome h1 {
     grid-template-columns: 1fr;
   }
-  .innerPannel{
+  .panel2.education .text .innerPannel{
     display:grid;
     grid-template-columns: 1fr;  
+  }
+  .panel2.skills .text .innerPannel{
+    grid-template-columns: 1fr;
   }
 }
 
