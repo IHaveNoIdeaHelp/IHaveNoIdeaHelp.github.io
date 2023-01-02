@@ -301,7 +301,7 @@ footer a:hover{
 }
 @media screen and (max-width: 680px) {
   main {
-    grid-template-rows: 700px 800px 600px;
+    grid-template-rows: 700px 800px 900px;
   }
   .panel.about {
     grid-column: span 1;
