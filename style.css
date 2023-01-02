@@ -66,7 +66,9 @@ main {
   min-width: 100%;
   margin-left: -30%;
 }
-
+.footerInIndex{
+   grid-column: 1 / span 3;
+}
 footer a{
   text-decoration: none;
   color: #323230;
@@ -82,6 +84,8 @@ footer p img{
 footer a:hover{
  color: #990000;
  background-color:#ff9999;
+ border-radius:5px;
+
 }
 
 
@@ -211,6 +215,22 @@ footer a:hover{
   background-color: #323230;
   color: #a8a8a8;
 }
+.panel2.hobbies .color2{
+  background-color: #c79c6d;
+  //color: #a8a8a8;
+}
+.gameGallery{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.gameGallery div{
+  padding: 5px;
+}
+.gameGallery div img{
+  object-fit: contain;
+  width: 100%;
+  height: 250px;
+}
 
 
 
@@ -229,6 +249,13 @@ footer a:hover{
   .panel.photos img {
     margin-left: 0%;
     overflow:hidden;
+  }
+  .gameGallery{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .footerInIndex{
+    grid-column: 1 / span 2;
   }
 }
 
@@ -264,7 +291,13 @@ footer a:hover{
     display:grid;
     grid-template-columns: 0fr 1fr 1fr 0fr;  
   }
-
+  .gameGallery{
+    display:grid;
+    grid-template-columns: 1fr;
+  }
+  .footerInIndex{
+    grid-column: 1 / span 2;
+  }
 }
 @media screen and (max-width: 680px) {
   main {
@@ -291,7 +324,7 @@ footer a:hover{
   }
   
   .main2 {
-    grid-template-rows: 700px 800px 700px;
+    grid-template-rows: 700px 800px 800px;
   }
   .panel2.welcome h1 {
     grid-template-columns: 1fr;
@@ -302,6 +335,9 @@ footer a:hover{
   }
   .panel2.skills .text .innerPannel{
     grid-template-columns: 1fr;
+  }
+  .footerInIndex{
+    grid-column: 1 / span 1;
   }
 }
 
